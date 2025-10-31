@@ -25,6 +25,7 @@ sudo apt install build-essential libssl-dev
 
 #### *⚠️ La librería libssl-dev es necesaria para usar las funciones de hash MD5 (OpenSSL).*
 
+---
 
 ## 📂 2. Estructura del proyecto
 
@@ -53,6 +54,7 @@ sudo apt install build-essential libssl-dev
         ├── socket_utils.c
         └── worker_utils.c
 ```
+---
 
 ## ⚙️ 3. Compilación
 
@@ -86,6 +88,8 @@ gcc -o worker main.c worker.c socket_utils.c string_utils.c mining_utils.c -lssl
 ```
 #### *Esto genera el ejecutable worker.*
 #### *⚠️ Es importante añadir los flags -lssl y -lcrypto al final, ya que indica al compilador que dependencias debe utilizar para el uso de hash MD5 en este caso.*
+
+---
 
 ## 🚀 4. Ejecución
 
@@ -146,6 +150,7 @@ El leader mostrará mensajes como:
 Rango de busqueda enviado al worker 1: 0000 - hzzz
 Rango de busqueda enviado al worker 2: i000 - zzzz
 ```
+---
 
 ## 🧩 5. Ejemplo de salida completa
 
@@ -156,6 +161,8 @@ Enviando orden de detención [STOP] a worker: 10.0.2.15 [pid=9912]
 [X] Worker #1 desconectado (PID=9912, IP=10.0.2.15)
 Todos los workers han finalizado. Cerrando leader...
 ```
+---
+
 ## 🔍 6. Comprobar si los procesos se ejecutan correctamente y con los pids indicados en el programa
 
 Ver procesos activos (para verificar los workers corriendo):
@@ -163,17 +170,23 @@ Ver procesos activos (para verificar los workers corriendo):
 ```bash
 ps -ef | grep worker
 ```
-## 💡 Consideraciones importantes
+---
+
+## 💡 7. Consideraciones importantes
 
 - Los workers dividen el rango de búsqueda alfabéticamente (0000-hzzz, i000-zzzz, etc.) para evitar solapamientos / se utilizan las posibilidades de combinación de 0-9 + a-z.
 
-## 👨‍💻 Autor
+---
+
+## 👨‍💻 8. Autor
 
 ### Jesús Pérez
 #### Código estudiantil: 160004725
 #### Universidad de los Llanos
 
-## 📚 Referencias importantes
+---
+
+## 📚 9. Referencias importantes
 
 - Códigos de ejemplo suministrados por el docente
 - Documentación en internet sobre sockets en C
