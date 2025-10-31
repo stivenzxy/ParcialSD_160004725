@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "wait.h": "c",
+        "worker_utils.h": "c",
+        "mining_utils.h": "c",
+        "string_utils.h": "c"
+    }
+}
